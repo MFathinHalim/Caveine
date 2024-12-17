@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Averia%20Serif%20Libre:700|Karla:400");
+@import url('https://fonts.googleapis.com/css?family=Narnoor:700|Shippori%20Antique:400');
 
 :root {
     --text: #f0f3ef;
@@ -12,7 +12,7 @@ body,
 .list-group-item {
     background-color: var(--background) !important;
     color: var(--text) !important;
-    font-family: "Karla" !important;
+    font-family: 'Shippori Antique' !important;
     font-size: larger;
     font-weight: 400;
 }
@@ -22,14 +22,37 @@ h2,
 h3,
 h4,
 h5 {
-    font-family: "Averia Serif Libre" !important;
+    font-family: 'Narnoor' !important;
     font-weight: 700 !important;
 }
 
 .btn {
     border: none !important;
-    font-family: "Karla" !important;
+    font-family: 'Shippori Antique' !important;
     font-weight: normal;
+}
+.image-wrapper {
+    position: relative;
+    width: 230px !important;
+    height: 200px !important;
+}
+
+.image-blur {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px !important;
+    height: 200px !important;
+    filter: blur(20px);
+    z-index: -1; /* Gambar blur di belakang */
+}
+
+.image-main {
+    position: relative;
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 .btn-primary {
     background: var(--primary) !important;
@@ -46,7 +69,7 @@ h5 {
 }
 .jumbotron {
     position: relative; /* Pastikan elemen memiliki posisi relatif untuk pseudo-element */
-    background-image: url('banner.gif'); /* Ganti dengan path gambar Anda */
+    background-image: url('https://ik.imagekit.io/9hpbqscxd/SG/image-84.jpg?updatedAt=1705798245623'); /* Ganti dengan path gambar Anda */
     background-size: cover;
     background-position: center;
     height: 60vh;

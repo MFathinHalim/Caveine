@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css?family=Averia%20Serif%20Libre:700|Karla:400");
+
+:root {
+    --text: #f0f3ef;
+    --background: #090c08;
+    --primary: #3c4439;
+    --secondary: #f7f5fe;
+    --accent: #94ce77;
+}
+
+body,
+.list-group-item {
+    background-color: var(--background) !important;
+    color: var(--text) !important;
+    font-family: "Karla" !important;
+    font-size: larger;
+    font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: "Averia Serif Libre" !important;
+    font-weight: 700 !important;
+}
+
+.btn {
+    border: none !important;
+    font-family: "Karla" !important;
+    font-weight: normal;
+}
+.btn-primary {
+    background: var(--primary) !important;
+}
+.btn-secondary {
+    background-color:  #5865F2 !important;
+}
+.bg-dark {
+    background-color: #2f3136 !important;
+    color: var(--background) !important;
+}
+.border-gray {
+    border: 1px solid rgba(114, 114, 114, 0.831)important;
+}
+.jumbotron {
+    position: relative; /* Pastikan elemen memiliki posisi relatif untuk pseudo-element */
+    background-image: url('banner.gif'); /* Ganti dengan path gambar Anda */
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    color: white;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+    overflow: hidden; /* Pastikan pseudo-element tidak keluar dari elemen ini */
+}
+
+/* Overlay hitam */
+.jumbotron::before {
+    content: ''; /* Membuat pseudo-element aktif */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Hitam dengan opasitas 50% */
+    z-index: 1; /* Pastikan overlay berada di atas background */
+}
+
+/* Konten di atas overlay */
+.jumbotron > * {
+    position: relative;
+    z-index: 2; /* Pastikan konten berada di atas overlay */
+}
